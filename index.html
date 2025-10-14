@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="MGPBD - Chunlei Li, Peng Yu, Tiantian Liu, Siyuan Yu, Yuting Xiao, Shuai Li, Aimin Hao, Yang Gao, Qinping Zhao">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Chunlei Li, Peng Yu, Tiantian Liu, Siyuan Yu, Yuting Xiao, Shuai Li, Aimin Hao, Yang Gao, Qinping Zhao">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>MGPBD: A Multigrid Accelerated Global XPBD Solver - Chunlei Li, Peng Yu, Tiantian Liu, Siyuan Yu, Yuting Xiao, Shuai Li, Aimin Hao, Yang Gao, Qinping Zhao | Academic Research</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "MGPBD: A Multigrid Accelerated Global XPBD Solver",
+    "description": "This paper presents a novel multigrid accelerated global XPBD solver for efficient and stable high-resolution simulations of deformable objects.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://chunleili.github.io/project-page-mgpbd",
+    "image": "https://chunleili.github.io/project-page-mgpbd/static/images/teaser.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://chunleili.github.io/project-page-mgpbd"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">MGPBD: A Multigrid Accelerated Global XPBD Solver</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://chunleili.github.io/personal-page" target="_blank">Chunlei Li</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Peng Yu</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://tiantianliu.cn" target="_blank">Tiantian Liu</a></sup>,</span>
+                  </span>
+
+
+                  <span class="author-block">
+                    <a href="https://ysysimon.com" target="_blank">Siyuan Yu</a>,</span>
+                    <span class="author-block">
+                      <a href="BLANK" target="_blank">Yuting Xiao</a>,</span>
+                      <span class="author-block">
+                        <a href="https://shuaili.com" target="_blank">Shuai Li</a>,</span>
+                        <span class="author-block">
+                          <a href="https://scse.buaa.edu.cn/info/1078/2654.htm" target="_blank">Aimin Hao</a>,</span>
+                          <span class="author-block">
+                            <a href="https://scse.buaa.edu.cn/info/1388/10467.htm" target="_blank">Yang Gao</a>,</span>
+                            <span class="author-block">
+                              <a href="https://www.cae.cn/cae/html/main/colys/42717920.html" target="_blank">Qinping Zhao</a></span>
+                            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Beihang University<br>SIGGRAPH 2025</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2505.13390" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+                 
+                    
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span> -->
+                    </a>
+                  </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/chunleili/mgpbd" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                 <span class="link-block">
+                    <a href="https://github.com/chunleili/mgpbd/releases" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+
+
+                
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1NcZVITDUfJIG9hKNJkx2TqsEaNnO3dNk/view" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-download"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+
+                <!-- TODO: Update with your arXiv paper ID
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2505.13390" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="static/images/human_preview.png" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/human_front_render.mp4" type="video/mp4">
+      </video>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+        Human muscle with 1.66 million tetrahedra simulated by our MGPBD solver.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            We introduce a novel Unsmoothed Aggregation (UA) Algebraic Multigrid (AMG) method combined with Preconditioned Conjugate Gradient (PCG) to overcome the limitations of Extended Position-Based Dynamics (XPBD) in high-resolution and high-stiffness simulations. While XPBD excels in simulating deformable objects due to its speed and simplicity, its nonlinear Gauss-Seidel (GS) solver often struggles with low-frequency errors, leading to instability and stalling issues, especially in high-resolution, high-stiffness simulations. Our multigrid approach addresses these issues efficiently by leveraging AMG. To reduce the computational overhead of traditional AMG, where prolongator construction can consume up to two-thirds of the runtime, we propose a lazy setup strategy that reuses prolongators across iterations based on matrix structure and physical significance. Furthermore, we introduce a simplified method for constructing near-kernel components by applying a few sweeps of iterative methods to the homogeneous equation, achieving convergence rates comparable to adaptive smoothed aggregation (adaptive-SA) at a lower computational cost. Experimental results demonstrate that our method significantly improves convergence rates and numerical stability, enabling efficient and stable high-resolution simulations of deformable objects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/ResidualSquashedBunny2Col-1.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Residual history compared with XPBD in different resolutions. Markers are spaced every 5 iterations.
+        </h2>
+      </div>
+      <div class="item">
+    </div>
+  </div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- TODO: Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/heScPwJo4AU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Experiments</h2>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="static/images/capy_preview.png" id="video1" autoplay controls muted loop height="180" preload="metadata" style="max-width:100%;">
+            <source src="static/videos/capbara.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="static/images/bunny_preview.png" id="video2" autoplay controls muted loop height="180" preload="metadata" style="max-width:100%;">
+            <source src="static/videos/bunny.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="static/images/ball_preview.png" id="video3" autoplay controls muted loop height="180" preload="metadata" style="max-width:100%;">
+            <source src="static/videos/ball_99k.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="static/images/beam_preview.png" id="video4" autoplay controls muted loop height="180" preload="metadata" style="max-width:100%;">
+            <source src="static/videos/beam.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Submitted video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Submitted Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <!-- TODO: Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/mjLawWRBRj0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End submitted video -->
+
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <!-- TODO: Replace with your poster PDF -->
+      <iframe  src="static/pdfs/sig25 poster-v1.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{Li2025MGPBD,
+  title={MGPBD: A Multigrid Accelerated Global XPBD Solver},
+  author={Chunlei Li, Peng Yu, Tiantian Liu, Siyuan Yu, Yuting Xiao, Shuai Li, Aimin Hao, Yang Gao, Qinping Zhao},
+  journal={ACM SIGGRAPH 2025 Conference Proceedings},
+  year={2025},
+  url={https://doi.org/10.1145/3721238.3730720}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
